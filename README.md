@@ -48,24 +48,33 @@ detail about your simulation results.
 (7) Design an output feedback linear MPC for controlling the pitch angle (𝜃) and the yaw angle (𝜓)
 to their respective setpoints. At this point, do not worry about integral action, however, please
 do consider the following:
-a. Your controller should not supply more than 3[V] as the control inputs. They cannot be less
+
+    a. Your controller should not supply more than 3[V] as the control inputs. They cannot be less
 than 0 [V] either. Using signal limiter block in Simulink is NOT ENOUGH. You should
 consider this while formulating your optimal control problem.
-b. You should show the MPC problem formulation very clearly. Show the objective function,
+
+    b. You should show the MPC problem formulation very clearly. Show the objective function,
 constraints, bounds etc. Show your choice of the unknown vectors to optimize.
-c. You should show every detailed step of how you calculated/formulated all the necessary
+
+    c. You should show every detailed step of how you calculated/formulated all the necessary
 matrices and vectors. How did you handle the bounds (if any?)
-d. How did you implement the receeding horizon strategy in Simulink? Show clearly.
-e. The linear MPC should be applied to the helicopter process. For the simulator, consider
+
+    d. How did you implement the receeding horizon strategy in Simulink? Show clearly.
+
+    e. The linear MPC should be applied to the helicopter process. For the simulator, consider
 the nonlinear model of the helicopter as your process. Please DO NOT use the linear model
 as your process. You can of course make use of things that you already did in task (iii) for
 the nonlinear model of the process.
-f. Provide step changes to the setpoint values and observe the response of your controller.
+
+    f. Provide step changes to the setpoint values and observe the response of your controller.
 Change your setpoint as ramp (for e.g. using slider or knob in Simulink) and observe the
 response of your controller.
-g. Plot all the necessary variables (outputs, estimated states, inputs, references etc.)
-h. Discuss in details all your simulation results.
-i. Among many other things, did you observe any steady-state offsets with your linear MPC?
+
+    g. Plot all the necessary variables (outputs, estimated states, inputs, references etc.)
+
+    h. Discuss in details all your simulation results.
+
+    i. Among many other things, did you observe any steady-state offsets with your linear MPC?
 
 (8) Design an output feedback linear MPC with integral action. Consider the points (vii) a, e, f and
 g while designing the controller. How can you ensure integral action with your linear MPC? If
