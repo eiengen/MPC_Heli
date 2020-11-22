@@ -12,3 +12,5 @@ Kpy    = 0.005;   % [Nm/V] - Torque constant on pitch axis from yaw motor
 Kyp    = 0.15;    % [Nm/V] - Torque constant on yaw axis from pitch motor
 Bp     = 0.01;    % [N/V]  - Damping friction factor about pitch axis
 By     = 0.08;    % [N/V]  - Damping friction factor about yaw axis
+
+
