@@ -33,11 +33,11 @@ H = zeros(2,4);
 %plant = ss(A,[B,G],C,[D H]); %D = 0 since it is not present
 plant = ss(Ac,[Bc,G],Cc,0); %D = 0 since it is not present
 %%
-Q = diag([1e1,7e1,4e1,6e1]); %process
-R = diag([0.01,0.1]); %measurement noise
+Q = diag([5e1,7e1,8e1,6e1]); %process
+R = diag([0.1,0.1]); %measurement noise
 %note: If you trust your sensors, you can put relatively less R. If you do
 %not trust your model, you can put relatively more Q.
 
 %calculate the initial kalman gain L
-[kalmf,L,P,M] = kalman(plant,Q,R);
+[kalmf,L,P0,M] = kalman(plant,Q,R);
  
