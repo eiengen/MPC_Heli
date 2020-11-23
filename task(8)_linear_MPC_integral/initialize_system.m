@@ -6,7 +6,7 @@ clc
 heli_parameters
 
 %% Configure operating points for the states
-th_op    = -30*pi/180; 
+th_op    = -10*pi/180; 
 yw_op    = pi/2;
 w_th_op  = 0;          
 w_yw_op  = 0;
@@ -16,8 +16,8 @@ Vmp_op = (Kyy*m_heli*g*cos(th_op)*l_cm) / (Kyy*Kpp - Kyp*Kpy);
 Vmy_op = (Kyp*Vmp_op) / (Kyy);
 
 %% Integral action parameter
-Ki_pitch = 0.1;
-Ki_yaw   = 0.1;
+Ki_pitch = 0.01;
+Ki_yaw   = 0.001;
 
 %% Compute linearized system matrices Ac, Bc and Cc
 linearize_heli
@@ -40,7 +40,7 @@ H = zeros(2,4);
 %plant = ss(A,[B,G],C,[D H]); %D = 0 since it is not present
 plant = ss(Ac,[Bc,G],Cc,0); %D = 0 since it is not present
 %
-Q = diag([5e1,4e1,8e1,6e1]); %process
+Q = diag([5e1,7e1,8e1,6e1]); %process
 R = diag([0.1,0.1]); %measurement noise
 %note: If you trust your sensors, you can put relatively less R. If you do
 %not trust your model, you can put relatively more Q.
