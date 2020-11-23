@@ -5,7 +5,7 @@ clc
 % Define model parameters
 heli_parameters
 % Operating points for the states
-th_op    = -30*pi/180; 
+th_op    = -10*pi/180; 
 yw_op    = pi/2;
 w_th_op  = 0;          
 w_yw_op  = 0;
@@ -34,7 +34,7 @@ H = zeros(2,4);
 plant = ss(Ac,[Bc,G],Cc,0); %D = 0 since it is not present
 %%
 Q = diag([5e1,7e1,8e1,6e1]); %process
-R = diag([1,1]); %measurement noise
+R = diag([0.1,0.1]); %measurement noise
 %note: If you trust your sensors, you can put relatively less R. If you do
 %not trust your model, you can put relatively more Q.
 
