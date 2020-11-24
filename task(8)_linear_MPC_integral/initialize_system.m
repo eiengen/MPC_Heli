@@ -16,8 +16,8 @@ Vmp_op = (Kyy*m_heli*g*cos(th_op)*l_cm) / (Kyy*Kpp - Kyp*Kpy);
 Vmy_op = (Kyp*Vmp_op) / (Kyy);
 
 %% Integral action parameter
-Ki_pitch = 0.4;
-Ki_yaw   = -0.4;
+Ki_pitch = -0.5;
+Ki_yaw   = 0.5;
 
 %% Compute linearized system matrices Ac, Bc and Cc
 linearize_heli
