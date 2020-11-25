@@ -55,7 +55,7 @@ extern "C" {
 
 /* SETTINGS */
 #define SAMPLINGTIME   0.1 /*  -1		*/		/**< Sampling time. */
-#define NCONTROLINPUTS  200  /*2	*/				/**< Number of unknowns to optimize. */
+#define NCONTROLINPUTS  120  /*2	*/				/**< Number of unknowns to optimize. */
 #define MAXITER         400	    				/**< Maximum number of iterations. */
 #define HESSIANTYPE     HST_SEMIDEF /*HST_UNKNOWN*/				/**< Hessian type, see documentation of SQProblem class constructor. */
 #define CPUTIME    0 /*max CPU time*/

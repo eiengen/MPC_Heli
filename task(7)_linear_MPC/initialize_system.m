@@ -6,7 +6,7 @@ clc
 heli_parameters
 
 %% Configure operating points for the states
-th_op    = 15*pi/180; 
+th_op    = -10*pi/180; 
 yw_op    = pi/2;
 w_th_op  = 0;          
 w_yw_op  = 0;
